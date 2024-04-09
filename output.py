@@ -36,3 +36,15 @@ write_file.close()
 # Try to read from the file
 print (read_file.read())
 read_file.close()
+
+# The "with" and "as" Keywords
+with open("text.txt", "w") as textfile:
+  textfile.write("Success!")
+
+with open("text.txt", "w") as my_file:
+  my_file.write("Here is with ... as")
+
+# Check file closed
+if my_file.closed != True:
+  my_file.close()
+print (my_file.closed)
